@@ -6,6 +6,14 @@
     <title>Udenwa's portfolio</title>
     <link rel="shortcut icon" href="# " type="image/x-icon">
     <link rel="stylesheet" href="portfolio.css">
+
+    <head>
+    <!-- other tags -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init('BzhCZ085rjuU3HmbR');
+    </script>
+</head>
  </head>
  <body>
     <header class="header d_flex">
@@ -137,48 +145,48 @@
 
         <div class="project_container">
 
-            <div class="project-grid">
-                <!-- project 1 -->
+            <div class="project-grid" id="project-grid">
+                <!-- project 1
                 <a href="https://your-projects1-link.com" target="_blank" class="project-card">
                     <img src="./assets/Backgroundimage/Star.jpg" alt="Project 1">
                     <h3>Project Title 1</h3>
                     <p>Short description of the project goes here.</p>
                 </a>
 
-                <!-- project 2 -->
+                project 2
                 <a href="https://your-projects2-link.com" target="_blank" class="project-card">
                     <img src="./assets/Backgroundimage/lightblue.jpg" alt="Project 1">
                     <h3>Project Title 2</h3>
                 <p>Short description of the project goes here.</p>
                 </a>
 
-                <!-- project 3 -->
+                project 3
                 <a href="https://your-projects3-link.com" target="_blank" class="project-card">
                     <img src="./assets/Backgroundimage/Time.jpg" alt="Project 1">
                     <h3>Project Title 3</h3>
                     <p>Short description of the project goes here.</p>
                 </a>
 
-                <!-- project 4 -->
+                project 4
                 <a href="https://your-projects4-link.com" target="_blank" class="project-card">
                     <img src="./assets/Backgroundimage/black and white.jpg" alt="Project 1">
                     <h3>Project Title 4</h3>
                     <p>Short description of the project goes here.</p>
                 </a>
 
-                <!-- project 5 -->
+                project 5
                 <a href="https://your-projects5-link.com" target="_blank" class="project-card">
                     <img src="./assets/Backgroundimage/vision.jpg" alt="Project 1">
                     <h3>Project Title 5</h3>
                     <p>Short description of the project goes here.</p>
                 </a>
 
-                <!-- project 6 -->
+                project 6
                 <a href="https://your-projects6-link.com" target="_blank" class="project-card">
                     <img src="./assets/Backgroundimage/workspace.jpg" alt="Project 1">
                     <h3>Project Title 6</h3>
                     <p>Short description of the project goes here.</p>
-                </a>
+                </a> -->
             </div>
         </div>
     </section>
@@ -244,35 +252,36 @@
                             <a href="https://github.com/Fidelis123"><h4>GitHub</h4></a>
                         </div>
                 </div>
-                <form action="#" method="post" class="contact-form cont2">
+                <form id="contact-form" class="contact-form cont2">
                     <div class="form-group">
-                        <input type="text" name="firstname" placeholder="First name" required>
+                        <input type="text" name="name" placeholder="First name" required>
                     </div>
 
                     <div class="form-group">
-                        <input type="email" placeholder="Email" required>
+                        <input type="email" name="email" placeholder="Email" required>
                     </div>
 
                     <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="write your message" required></textarea>
-                </div>
+                        <textarea name="message" rows="5" placeholder="Write your message" required></textarea>
+                    </div>
 
-                    <button type="submit"> Send Message</button>
+                    <button type="submit">Send Message</button>
                 </form>
-
-            </div>
-       </div>
 </section>
 
 
     <footer>
         
-        <div class="footer-content"><p>&copy; 2026 Udenwa Fidelis Ojinkama. All rights reserved.</p>
+        <div class="footer-content"><p>&copy; <span id="year"></span> Udenwa Fidelis Ojinkama. All rights reserved.</p>
     </footer>
 
 
 
     <script src="./assets/mainjs/main.js"></script>
+    
  </body>
  </html>
+ 
+ 
+
  

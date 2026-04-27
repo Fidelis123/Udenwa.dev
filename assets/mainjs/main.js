@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     initNavigation();
     initSmoothScrolling();
-    loadFeatured();
+    // loadFeatured();
     // loadSkills();
     // loadProjects();
      initScrollEffects();
@@ -112,9 +112,50 @@ function initScrollEffects() {
 
 }
 
-/* Load featured from API and display them */
+/* Display projects in the projects grid */
 
+// Uncomment when backend is ready
+// async function loadProjects() {
+//     const response = await fetch('api/projects.php');
+//     const projects = await response.json();
+//     displayProjects(projects);
+// }
 
+// loadProjects();
+
+/* escape HTML to prevent xss */
+
+function escapeHTML(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initNavigation();
+    initSmoothScrolling();
+    initScrollEffects();
+
+    // EmailJS form
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            emailjs.sendForm('service_an49h5b', 'template_rlesja3', this)
+                .then(function() {
+                    alert('Message sent successfully!');
+                    contactForm.reset();
+                })
+                .catch(function(error) {
+                    alert('Failed to send message. Please try again.');
+                    console.error(error);
+                });
+        });
+    }
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
 
 
 
