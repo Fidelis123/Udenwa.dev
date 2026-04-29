@@ -132,10 +132,7 @@ function escapeHTML(text) {
 
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    initNavigation();
-    initSmoothScrolling();
-    initScrollEffects();
+
 
     // EmailJS form
     const contactForm = document.getElementById('contact-form');
@@ -153,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         });
     }
-});
+
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
