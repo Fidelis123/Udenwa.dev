@@ -415,6 +415,11 @@
             /* border: solid #0099cc 2px; */
 
         }
+
+        .about-text span{
+            color: #00d4ff;
+            font-weight: 600;
+        }
         .skills-section{
             align-items: center;
             justify-content: center;
@@ -839,6 +844,14 @@
         margin: 15px auto;
         width: 95%;
         height: 200px;
+    }
+
+    .featured_container span {
+        /* display: block; */
+        text-align: center;
+        margin: 20px 0;
+        color: #00d4ff;
+        font-size: 1.5rem;
     }
 
     .project_container {
