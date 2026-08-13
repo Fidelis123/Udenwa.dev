@@ -903,11 +903,7 @@
         justify-content: center;
     }
 
-    /* .project-card {
-        width: 45vh;
-        margin: auto;
-        height: 40vh;
-    } */
+    
     .project_container::-webkit-scrollbar {
         width: 2px;
     }
@@ -942,5 +938,6 @@
         flex-direction: column;
         
     }
+    
 
 }
