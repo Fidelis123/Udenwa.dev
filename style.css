@@ -890,10 +890,12 @@
     .project_container {
         border-top: #0099cc solid 1px;
         border-bottom: #0099cc solid 1px;
-        height: 100vh;
+        /* height: 100vh; */
         overflow-y: auto;
         padding: 10px 0;
     }
+
+    
     .project_container::-webkit-scrollbar {
         width: 2px;
     }
