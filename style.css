@@ -894,19 +894,17 @@
      .project_container {
         border-top: #0099cc solid 1px;
         border-bottom: #0099cc solid 1px;
-        height: 100vh;
         overflow-y: auto;
         padding: 10px 0;
-        width: 50vh;
-        margin-left: auto ;
-        align-items: center;
-        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
     }
 
       .project-card {
         padding: 16px;
         border-radius: 16px;
         margin-bottom: 8px;
+        /* width: 40vh; */
   }
 
     
@@ -922,10 +920,6 @@
     .featured_container::-webkit-scrollbar-thumb:hover {
         background: #007aa3;
     }
-
-
-
-
     .project-grid {
         grid-template-columns: 1fr;
         margin-top: 10px;
