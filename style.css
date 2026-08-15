@@ -903,6 +903,12 @@
         justify-content: center;
     }
 
+      .project-card {
+        padding: 16px;
+        border-radius: 16px;
+        margin-bottom: 8px;
+  }
+
     
     .project_container::-webkit-scrollbar {
         width: 2px;
@@ -936,7 +942,12 @@
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
-        
+    }
+    
+    .project-card {
+        padding: 12px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgb(38, 38, 52);
     }
     
 
