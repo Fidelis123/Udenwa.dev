@@ -111,7 +111,7 @@ const projectsData = [
         description: "A fast, responsive online storefront featuring dynamic product catalog browsing, cart operations, and mobile-optimized layouts.",
         image: "./assets/Backgroundimage/Blaze-update.png",
         alt: "Blaze Shop E-Commerce Store",
-        url: "https://blaze-shop-five.vercel.app",
+        url: "https://blaze-home-of-fashion-wkop.vercel.app",
         github: "https://github.com/Fidelis123",
         status: "demo",
         categories: ["all", "ecommerce"],
