@@ -1037,60 +1037,22 @@ button {
    -------------------------------------------------------------------------- */
 .slider-outer-wrapper {
     position: relative;
-    display: flex;
-    align-items: center;
+    display: block;
     width: 100%;
     margin: 0 auto;
 }
 
-.slider-arrow {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--bg-secondary);
-    border: 1px solid var(--accent-blush);
-    color: var(--accent-lightsea);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    cursor: pointer;
-    flex-shrink: 0;
-    z-index: 10;
-    transition: var(--transition-fast);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.slider-arrow:hover {
-    background: var(--accent-teal);
-    border-color: var(--accent-teal);
-    color: #ffffff;
-    transform: scale(1.08);
-    box-shadow: 0 6px 20px rgba(8, 129, 120, 0.4);
-}
-
-.slider-arrow:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-    pointer-events: none;
-    transform: none;
-}
-
-.slider-arrow.prev {
-    margin-right: 12px;
-}
-
-.slider-arrow.next {
-    margin-left: 12px;
+.slider-arrow,
+#skills-prev-btn,
+#skills-next-btn,
+#projects-prev-btn,
+#projects-next-btn {
+    display: none !important;
 }
 
 /* --------------------------------------------------------------------------
    10. Skills Section (Compact Desktop Grid & Mobile Slider)
    -------------------------------------------------------------------------- */
-#skills-prev-btn,
-#skills-next-btn {
-    display: none;
-}
 
 .skills-scroll-container {
     width: 100%;
@@ -1140,6 +1102,9 @@ button {
     width: 24px;
     height: 24px;
     object-fit: contain;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
 }
 
 .skill-details {
@@ -1219,6 +1184,12 @@ button {
     padding: 12px 4px 20px;
     scrollbar-width: thin;
     scrollbar-color: var(--accent-teal) #1c1828;
+    cursor: grab;
+    user-select: none;
+}
+
+.projects-scroll-container:active {
+    cursor: grabbing;
 }
 
 .projects-scroll-container::-webkit-scrollbar {
@@ -1276,6 +1247,9 @@ button {
     height: 100%;
     object-fit: cover;
     transition: transform var(--transition-normal);
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
 }
 
 .project-card:hover .project-img-box img {
@@ -2299,19 +2273,7 @@ button {
         grid-template-columns: 1fr;
     }
 
-    .slider-arrow {
-        width: 36px;
-        height: 36px;
-        font-size: 0.85rem;
-    }
 
-    .slider-arrow.prev {
-        margin-right: 8px;
-    }
-
-    .slider-arrow.next {
-        margin-left: 8px;
-    }
 
     .projects-scroll-container {
         padding: 6px 2px 14px;
@@ -2378,17 +2340,34 @@ button {
         font-size: 0.76rem;
     }
 
-    #skills-prev-btn,
-    #skills-next-btn {
-        display: flex;
-    }
-
     .skills-scroll-container {
         overflow-x: auto;
         overflow-y: hidden;
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
         padding: 6px 2px 14px;
+        cursor: grab;
+        user-select: none;
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-teal) #1c1828;
+    }
+
+    .skills-scroll-container:active {
+        cursor: grabbing;
+    }
+
+    .skills-scroll-container::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .skills-scroll-container::-webkit-scrollbar-track {
+        background: #140f20;
+        border-radius: 10px;
+    }
+
+    .skills-scroll-container::-webkit-scrollbar-thumb {
+        background: var(--accent-teal);
+        border-radius: 10px;
     }
 
     .skills-slider {
@@ -2467,19 +2446,7 @@ button {
         display: none;
     }
 
-    .slider-arrow {
-        width: 32px;
-        height: 32px;
-        font-size: 0.78rem;
-    }
 
-    .slider-arrow.prev {
-        margin-right: 4px;
-    }
-
-    .slider-arrow.next {
-        margin-left: 4px;
-    }
 
     .projects-scroll-container {
         padding: 4px 2px 12px;

@@ -443,9 +443,11 @@ function setupHorizontalSlider(scrollContainerSelector, prevBtnSelector, nextBtn
     let isDown = false;
     let startX;
     let scrollLeft;
+    let hasDragged = false;
 
     scrollContainer.addEventListener("mousedown", (e) => {
         isDown = true;
+        hasDragged = false;
         scrollContainer.style.cursor = "grabbing";
         startX = e.pageX - scrollContainer.offsetLeft;
         scrollLeft = scrollContainer.scrollLeft;
@@ -453,21 +455,33 @@ function setupHorizontalSlider(scrollContainerSelector, prevBtnSelector, nextBtn
 
     scrollContainer.addEventListener("mouseleave", () => {
         isDown = false;
-        scrollContainer.style.cursor = "default";
+        scrollContainer.style.cursor = "grab";
     });
 
     scrollContainer.addEventListener("mouseup", () => {
         isDown = false;
-        scrollContainer.style.cursor = "default";
+        scrollContainer.style.cursor = "grab";
     });
 
     scrollContainer.addEventListener("mousemove", (e) => {
         if (!isDown) return;
-        e.preventDefault();
         const x = e.pageX - scrollContainer.offsetLeft;
         const walk = (x - startX) * 1.5;
+        if (Math.abs(x - startX) > 4) {
+            hasDragged = true;
+        }
+        e.preventDefault();
         scrollContainer.scrollLeft = scrollLeft - walk;
     });
+
+    // Prevent accidental navigation if the user was dragging
+    scrollContainer.addEventListener("click", (e) => {
+        if (hasDragged) {
+            e.preventDefault();
+            e.stopPropagation();
+            hasDragged = false;
+        }
+    }, true);
 
     // Check states after layout calculation
     setTimeout(updateArrowStates, 300);
